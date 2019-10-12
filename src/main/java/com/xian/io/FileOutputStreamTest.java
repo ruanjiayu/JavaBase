@@ -16,7 +16,7 @@ public class FileOutputStreamTest {
             int count, n = 512;
             byte buffer[] = new byte[n];
             count = System.in.read(buffer);
-            FileOutputStream wf = new FileOutputStream("write.txt");
+            FileOutputStream wf = new FileOutputStream("write.txt", true);
             wf.write(buffer, 0, count);
             wf.close(); // 当流写操作结束时，调用close方法关闭流。
             System.out.println("Save to the write.txt");

@@ -1,7 +1,7 @@
 package com.xian.string;
 
 /**
- * @Description:
+ * @Description: 对字符串的拼接进行一些性能的测试
  * @Author: Xian
  * @CreateDate: 2019/10/10  14:42
  * @Version: 0.0.1-SHAPSHOT

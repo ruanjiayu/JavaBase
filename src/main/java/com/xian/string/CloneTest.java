@@ -94,13 +94,19 @@ class ObjCloner {
         try{
 
             // 将对象写入流中
+
+            // 字节数组输出流在内存中创建一个字节数组缓冲区
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
+            // 普通的输出流只能写入字节或者字符，不能直接写入对象，而ObjectOutputStream却可以将对象写入流当中
             ObjectOutputStream oos = new ObjectOutputStream(baos);
             oos.writeObject(obj);
 
 
             // 从流中读出对象
+
+            // 将输入流放置在内存中的缓冲区域
             ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
+            // 将缓冲区内的数据放入对象流中
             ObjectInputStream ois = new ObjectInputStream(bais);
 
             retVal = (T)ois.readObject();

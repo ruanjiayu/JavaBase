@@ -4,7 +4,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 /**
- * @Description: 将数据保存到文件中
+ * @Description: 将数据保存到文件中, 会将原来的进行覆盖
  * @Author: Xian
  * @CreateDate: 2019/10/12  11:06
  * @Version: 0.0.1-SHAPSHOT

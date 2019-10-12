@@ -15,8 +15,9 @@ public class FileInputAndOutputTest {
     public static void main(String args[]) {
         try {
             File inFile = new File("hello.txt");
-            // 注意如果是全英文，那么会导致一件事，他会将其转换成全小写模式，也就会导致进行覆盖原来的文件
-            File outFile = new File("HELlO.txt");
+            // 注意如果是全英文，那么会导致一件事，他会将其转换成全小写模式，也就会导致进行覆盖原来的文件。如果说Hello2.txt文件。
+            // 那么在输出的文件名字就是Hello2.txt
+            File outFile = new File("Hello.txt");
             FileInputStream finS = new FileInputStream(inFile);
             FileOutputStream foutS = new FileOutputStream(outFile);
             int c;

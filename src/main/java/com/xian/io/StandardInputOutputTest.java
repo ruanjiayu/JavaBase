@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 /**
- * @Description: 在控制台输入，可以打印出输入的内容
+ * @Description: 在控制台输入，可以打印出输入的内容，可以按下Ctrl + d 来结束程序
  * @Author: Xian
  * @CreateDate: 2019/10/12  10:07
  * @Version: 0.0.1-SHAPSHOT

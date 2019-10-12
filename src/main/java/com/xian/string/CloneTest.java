@@ -95,7 +95,7 @@ class ObjCloner {
 
             // 将对象写入流中
 
-            // 字节数组输出流在内存中创建一个字节数组缓冲区
+            // 字节数组输出流在内存中创建一个字节数组缓冲区,如果想存入对象，目前的方法是将其Json成字符串再转成字节数组，不过会占用对于的空间
             ByteArrayOutputStream baos = new ByteArrayOutputStream();
             // 普通的输出流只能写入字节或者字符，不能直接写入对象，而ObjectOutputStream却可以将对象写入流当中
             ObjectOutputStream oos = new ObjectOutputStream(baos);
@@ -106,7 +106,7 @@ class ObjCloner {
 
             // 将输入流放置在内存中的缓冲区域
             ByteArrayInputStream bais = new ByteArrayInputStream(baos.toByteArray());
-            // 将缓冲区内的数据放入对象流中
+            // 将缓冲区内的数据放入
             ObjectInputStream ois = new ObjectInputStream(bais);
 
             retVal = (T)ois.readObject();
